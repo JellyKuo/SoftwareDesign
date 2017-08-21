@@ -39,7 +39,7 @@ namespace Q3
                 if (AfterDecimal[i] == '1')
                     y += Math.Pow(2,(i+1)*-1);
             }
-            resBox.Text += x.ToString() + "." + y.ToString();
+            resBox.Text += (x + y).ToString();
         }
 
         private void RndBtn_Click(object sender, EventArgs e)
