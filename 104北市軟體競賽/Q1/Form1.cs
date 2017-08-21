@@ -17,43 +17,36 @@ namespace Q1
             InitializeComponent();
         }
 
-        Button[] btn = new Button[9];
+        bool Turn = true;
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void BtnClick(object sender, EventArgs e)
         {
-            int x = 10, y = 10;
-            for(int i = 0;i < 9; i++)
+            #region 符號判斷
+            int[] Code = new int[2];
+            Code[0] = textBox1.Text[0];
+            Code[1] = textBox2.Text[0];
+            if ((Code[0] > 90 || Code[0] < 65) && (Code[0] > 122 || Code[0] < 97))
             {
-                btn[i] = new Button()
-                {
-                    Name = "btn" + i.ToString(),
-                    Size = new Size(50, 50),
-                    Location = new Point(x,y),
-                    Tag = i
-                };
-                x += 60;
-                if(x>=190)
-                {
-                    y += 60;
-                    x = 10;
-                }
-                btn[i].Click += BtnClick;
-                panel1.Controls.Add(btn[i]);
+                MessageBox.Show("輸入的符號無效");
+                return;
             }
-        }
-
-        private void BtnClick(object sender,EventArgs e)
-        {
+            if ((Code[1] > 90 || Code[1] < 65) && (Code[1] > 122 || Code[1] < 97))
+            {
+                MessageBox.Show("輸入的符號無效");
+                return;
+            }
+            #endregion
+            #region Set Value
             var S = sender as Button;
             S.Enabled = false;
-            var ID = (int)S.Tag;
-            Check();
+            S.Text = (Turn) ? textBox1.Text : textBox2.Text;
+            Turn = !Turn;
+            #endregion
+            #region Win
+
+            #endregion
 
         }
-
-        private void Check()
-        {
-            //TODO: Check
-        }
+       
     }
 }
