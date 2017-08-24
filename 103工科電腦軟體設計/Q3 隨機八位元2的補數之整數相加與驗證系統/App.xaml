@@ -1,0 +1,9 @@
+﻿<Application x:Class="Q3_隨機八位元2的補數之整數相加與驗證系統.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Q3_隨機八位元2的補數之整數相加與驗證系統"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
