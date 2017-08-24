@@ -7,6 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="隨機八位元2的補數之整數相加與驗證系統" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="75,50,0,0" TextWrapping="Wrap" Text="二進制加法" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="198,50,0,0" TextWrapping="Wrap" Text="十進制加法" VerticalAlignment="Top"/>
         
+        <TextBlock HorizontalAlignment="Left" Margin="10,79,0,0" TextWrapping="Wrap" Text="A:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,106,0,0" TextWrapping="Wrap" Text="B:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,130,0,0" TextWrapping="Wrap" Text="Sum:" VerticalAlignment="Top"/>
+        
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="45,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="45,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="45,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="45,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="170,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="170,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="170,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="170,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        
+        <Button Content="Random" HorizontalAlignment="Left" Margin="295,71,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="RndBtn_Click"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="295,98,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="AddBtn_Click"/>
+        <Button Content="Verify" HorizontalAlignment="Left" Margin="295,126,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="295,154,0,0" VerticalAlignment="Top" Width="75" Height="23"/>
+
     </Grid>
 </Window>
