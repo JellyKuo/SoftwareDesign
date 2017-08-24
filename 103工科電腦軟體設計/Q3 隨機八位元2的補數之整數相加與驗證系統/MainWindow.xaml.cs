@@ -24,15 +24,5 @@ namespace Q3_隨機八位元2的補數之整數相加與驗證系統
         {
             InitializeComponent();
         }
-
-        private void RndBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void AddBtn_Click(object sender,RoutedEventArgs e)
-        {
-
-        }
     }
 }
