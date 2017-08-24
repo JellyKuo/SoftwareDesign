@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q2", "Q2\Q2.csproj", "{E835044F-0679-4A58-8FC2-C8CE297F1261}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q2 名字編碼", "Q2\Q2 名字編碼.csproj", "{E835044F-0679-4A58-8FC2-C8CE297F1261}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q3", "Q3\Q3.csproj", "{6F299B52-A0A3-4466-B568-427C692D073C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q3 單精確度浮點二進制值轉換為十進制實數值系統", "Q3\Q3 單精確度浮點二進制值轉換為十進制實數值系統.csproj", "{6F299B52-A0A3-4466-B568-427C692D073C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q4", "Q4\Q4.csproj", "{4BBC38D1-DD78-4FFA-9EC5-FFD999DD9BF6}"
 EndProject
@@ -92,5 +92,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9A50A35-C7FD-4C8F-8DF8-6FA39795347B}
 	EndGlobalSection
 EndGlobal
