@@ -63,7 +63,7 @@
             // 
             this.mantissaBox.Font = new System.Drawing.Font("新細明體", 12F);
             this.mantissaBox.Location = new System.Drawing.Point(257, 16);
-            this.mantissaBox.MaxLength = 22;
+            this.mantissaBox.MaxLength = 23;
             this.mantissaBox.Name = "mantissaBox";
             this.mantissaBox.Size = new System.Drawing.Size(212, 27);
             this.mantissaBox.TabIndex = 2;

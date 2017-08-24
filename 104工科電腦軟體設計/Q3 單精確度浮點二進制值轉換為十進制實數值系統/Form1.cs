@@ -23,6 +23,10 @@ namespace Q3
             Application.ExitThread();
         }
 
+
+        #region Calculate Solution
+        //--Bugged when exponent is below 0 after removing 127--
+        /*
         private void ConBtn_Click(object sender, EventArgs e)
         {
             if (signBox.Text == "1")
@@ -41,6 +45,21 @@ namespace Q3
             }
             resBox.Text += (x + y).ToString();
         }
+        */
+        #endregion
+
+        #region Byte Array Cast Solution
+        //史上最好的解法 :)
+        private void ConBtn_Click(object sender, EventArgs e)
+        {
+            string InputStr = signBox.Text + exponentBox.Text + mantissaBox.Text;  //組合為長32的字串
+            byte[] Bytes = new byte[4];  //宣告4個byte的陣列，32 bits
+            for (int i = 0; i < 4; i++)  //重複4次 (4個byte)
+                Bytes[3 - i] = Convert.ToByte(InputStr.Substring(8 * i, 8), 2);  //把字串的值經過轉換為byte，填入陣列
+            Single Result = BitConverter.ToSingle(Bytes, 0);  //宣告一個Single，把byte陣列轉型填入
+            resBox.Text = Result.ToString();  //顯示結果
+        }
+        #endregion
 
         private void RndBtn_Click(object sender, EventArgs e)
         {
@@ -53,7 +72,7 @@ namespace Q3
             signBox.Text = rnd.Next(0, 2).ToString();
             for (int i = 0; i < 8; i++)
                 exponentBox.Text += rnd.Next(0, 2).ToString();
-            for (int i = 0; i < 22; i++)
+            for (int i = 0; i < 23; i++)
                 mantissaBox.Text += rnd.Next(0, 2).ToString();
         }
     }
