@@ -3,12 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "文件", "文件", "{78B566A7-F72D-4193-873D-78F96B3DBE5F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q5 Email組合程式", "Q5 Email組合程式\Q5 Email組合程式.csproj", "{534B32C5-37C2-488A-BA0C-25C653E2CB78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "文件", "文件", "{6C0C1B3C-9F16-4936-91B8-F2C44E334729}"
 	ProjectSection(SolutionItems) = preProject
 		文件\103工科電腦軟體設計.pdf = 文件\103工科電腦軟體設計.pdf
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q5", "Q5\Q5.csproj", "{534B32C5-37C2-488A-BA0C-25C653E2CB78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +25,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F6970A84-FC35-4953-A19B-412CDEB9C69D}
+		SolutionGuid = {CA8B0DB0-3010-4466-A605-E47A56E82216}
 	EndGlobalSection
 EndGlobal
