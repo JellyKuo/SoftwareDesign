@@ -10,8 +10,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "文件", "文件", "{6C0C1B
 		文件\103工科電腦軟體設計.pdf = 文件\103工科電腦軟體設計.pdf
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q3 隨機八位元2的補數之整數相加與驗證系統", "Q3 隨機八位元2的補數之整數相加與驗證系統\Q3 隨機八位元2的補數之整數相加與驗證系統.csproj", "{C3276075-1B07-4F34-9982-D28374C8E47B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,10 +20,6 @@ Global
 		{534B32C5-37C2-488A-BA0C-25C653E2CB78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{534B32C5-37C2-488A-BA0C-25C653E2CB78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{534B32C5-37C2-488A-BA0C-25C653E2CB78}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C3276075-1B07-4F34-9982-D28374C8E47B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3276075-1B07-4F34-9982-D28374C8E47B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C3276075-1B07-4F34-9982-D28374C8E47B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C3276075-1B07-4F34-9982-D28374C8E47B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
