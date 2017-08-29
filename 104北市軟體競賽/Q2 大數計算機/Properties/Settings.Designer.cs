@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Q2.Properties
+namespace Q2_大數計算機.Properties
 {
 
 
