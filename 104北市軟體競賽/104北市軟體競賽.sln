@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.10
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "文件", "文件", "{D282E617-92AF-4B20-8964-FC4B75328F0E}"
 	ProjectSection(SolutionItems) = preProject
@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "文件", "文件", "{D282E6
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q2 大數計算機", "Q2 大數計算機\Q2 大數計算機.csproj", "{D6841339-D0DD-456B-9590-4ADBD7E5EB8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q1 自訂符號井字遊戲", "Q1 自訂符號井字遊戲\Q1 自訂符號井字遊戲.csproj", "{6DEDBFF0-DC6E-4D24-8DC6-99D1D084B5CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{D6841339-D0DD-456B-9590-4ADBD7E5EB8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6841339-D0DD-456B-9590-4ADBD7E5EB8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6841339-D0DD-456B-9590-4ADBD7E5EB8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DEDBFF0-DC6E-4D24-8DC6-99D1D084B5CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DEDBFF0-DC6E-4D24-8DC6-99D1D084B5CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DEDBFF0-DC6E-4D24-8DC6-99D1D084B5CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DEDBFF0-DC6E-4D24-8DC6-99D1D084B5CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
