@@ -23,6 +23,27 @@ namespace Q1_自訂符號井字遊戲
         public MainWindow()
         {
             InitializeComponent();
+            Generate();
+        }
+
+        Button[,] Btn = new Button[3, 3];
+
+        private void Generate()
+        {
+            for(int i = 0; i < 3; i++)
+            {
+                for(int j = 0; j < 3; j++)
+                {
+                    Btn[i, j] = new Button()
+                    {
+                        Tag = new { Col=i,Row=j},
+                        Padding = new Thickness(10,0,0,10)
+                    };
+                    GameGrid.Children.Add(Btn[i, j]);
+                    Grid.SetColumn(Btn[i, j], i);
+                    Grid.SetRow(Btn[i, j], j);
+                }
+            }
         }
     }
 }
