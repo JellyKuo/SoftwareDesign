@@ -12,6 +12,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q2 大數計算機", "Q2 �
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q1 自訂符號井字遊戲", "Q1 自訂符號井字遊戲\Q1 自訂符號井字遊戲.csproj", "{6DEDBFF0-DC6E-4D24-8DC6-99D1D084B5CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q3 侵蝕處理程式", "Q3 侵蝕處理程式\Q3 侵蝕處理程式.csproj", "{D4A02D34-B50E-4DD3-AB63-4167F66E3821}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q4 彩色影像品質量測", "Q4 彩色影像品質量測\Q4 彩色影像品質量測.csproj", "{B45E9CD6-158A-467C-9F23-A1DED38875CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,14 @@ Global
 		{6DEDBFF0-DC6E-4D24-8DC6-99D1D084B5CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DEDBFF0-DC6E-4D24-8DC6-99D1D084B5CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DEDBFF0-DC6E-4D24-8DC6-99D1D084B5CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4A02D34-B50E-4DD3-AB63-4167F66E3821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4A02D34-B50E-4DD3-AB63-4167F66E3821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4A02D34-B50E-4DD3-AB63-4167F66E3821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4A02D34-B50E-4DD3-AB63-4167F66E3821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B45E9CD6-158A-467C-9F23-A1DED38875CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B45E9CD6-158A-467C-9F23-A1DED38875CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B45E9CD6-158A-467C-9F23-A1DED38875CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B45E9CD6-158A-467C-9F23-A1DED38875CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,32 @@
+﻿<Window x:Class="Q1_解工程合作問題.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Q1_解工程合作問題"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="有一件工程, 由甲獨做, 需要 X 天完成, 由乙獨做, 需要 Y 天完成, 若已知下列條件, 求 X 和 Y? " VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="1. 甲、乙合作 "/><InlineUIContainer>
+                <TextBox x:Name="N1Box" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+
+            </InlineUIContainer><Run Text="天可完成"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="10,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="2. 由甲、乙先合作 N2="/><InlineUIContainer>
+                <TextBox x:Name="N2Box" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+
+            </InlineUIContainer><Run Text="天後, 再由甲獨作 N3= "/><InlineUIContainer>
+                <TextBox x:Name="N3Box" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+
+            </InlineUIContainer><Run Text="天, 剩下的再由乙獨作 N4="/><InlineUIContainer>
+                <TextBox x:Name="N4Box" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Text=" "/>
+
+            </InlineUIContainer><Run Text="天。 "/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="10,118,0,0" TextWrapping="Wrap" Text="3. N3 不等於 N4, 且 X, Y, N1, N2, N3, 及 N4 的值都是整數。" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,150,0,0" TextWrapping="Wrap" Text="解:" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="160" Margin="30,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="397"/>
+        <Button x:Name="ExeBtn" Content="執行" HorizontalAlignment="Left" Margin="432,150,0,0" VerticalAlignment="Top" Width="75" Click="ExeBtn_Click"/>
+        <Button x:Name="ExtBtn" Content="離開" HorizontalAlignment="Left" Margin="432,177,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

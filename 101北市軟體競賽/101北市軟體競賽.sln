@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q1 解工程合作問題", "Q1 解工程合作問題\Q1 解工程合作問題.csproj", "{B0C6D0CC-6753-477E-8A28-3BB2F4DED2E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q2 框選圖中的阿拉伯數字", "Q2 框選圖中的阿拉伯數字\Q2 框選圖中的阿拉伯數字.csproj", "{59DC6331-A4F5-48BA-B386-F0CD37E94335}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q4 四則運算機", "Q4 四則運算機\Q4 四則運算機.csproj", "{323174B5-EC77-497F-9C0D-635BBCA0A9C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "文件", "文件", "{307C75B6-554D-4640-8D2F-1EE0140BABC7}"
+	ProjectSection(SolutionItems) = preProject
+		文件\101北市軟體競賽.pdf = 文件\101北市軟體競賽.pdf
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q3 畫盒鬚圖", "Q3 畫盒鬚圖\Q3 畫盒鬚圖.csproj", "{8015B7EA-C40C-4DB0-8777-76962D55F3AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0C6D0CC-6753-477E-8A28-3BB2F4DED2E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0C6D0CC-6753-477E-8A28-3BB2F4DED2E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0C6D0CC-6753-477E-8A28-3BB2F4DED2E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0C6D0CC-6753-477E-8A28-3BB2F4DED2E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59DC6331-A4F5-48BA-B386-F0CD37E94335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59DC6331-A4F5-48BA-B386-F0CD37E94335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59DC6331-A4F5-48BA-B386-F0CD37E94335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59DC6331-A4F5-48BA-B386-F0CD37E94335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{323174B5-EC77-497F-9C0D-635BBCA0A9C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{323174B5-EC77-497F-9C0D-635BBCA0A9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{323174B5-EC77-497F-9C0D-635BBCA0A9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{323174B5-EC77-497F-9C0D-635BBCA0A9C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8015B7EA-C40C-4DB0-8777-76962D55F3AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8015B7EA-C40C-4DB0-8777-76962D55F3AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8015B7EA-C40C-4DB0-8777-76962D55F3AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8015B7EA-C40C-4DB0-8777-76962D55F3AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6233B83C-3DAA-4DA5-A9FC-2144763FF9B0}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,17 @@
+﻿<Window x:Class="Q4_誤差擴散法.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Q4_誤差擴散法"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="459" Width="525">
+    <Grid>
+        <Button x:Name="ReadBtn" Content="讀檔" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="40"/>
+        <TextBox x:Name="PathBox" Height="23" Margin="55,10,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox x:Name="SrcBox" Margin="10,37,10,0" TextWrapping="Wrap" Height="175" VerticalAlignment="Top"/>
+        <TextBox x:Name="ResBox" Margin="10,244,10,0" TextWrapping="Wrap" Height="175" VerticalAlignment="Top"/>
+        <Button x:Name="ExeBtn" Content="誤差擴散法" Margin="10,217,0,0" HorizontalAlignment="Left" Width="75" Height="22" VerticalAlignment="Top" Click="ExeBtn_Click"/>
+
+    </Grid>
+</Window>

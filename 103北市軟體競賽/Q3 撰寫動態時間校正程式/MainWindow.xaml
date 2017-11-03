@@ -1,0 +1,19 @@
+﻿<Window x:Class="Q3_撰寫動態時間校正程式.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Q3_撰寫動態時間校正程式"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="431">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="請輸入數個一位或二位數的數值(每個數後加逗號分隔)" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="Wrap" Text="第一組數值" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,62,0,0" TextWrapping="Wrap" Text="第二組數值" VerticalAlignment="Top"/>
+        <TextBox x:Name="FirValBox" Height="23" Margin="75,31,129,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="SecValBox" Height="23" Margin="75,59,129,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="CalcBtn" Content="計算DTW累積距離" Margin="0,46,10,0" VerticalAlignment="Top" Click="CalcBtn_Click" HorizontalAlignment="Right" Width="114"/>
+        <TextBox x:Name="ResBox" Margin="10,87,10,10" TextWrapping="Wrap"/>
+
+    </Grid>
+</Window>

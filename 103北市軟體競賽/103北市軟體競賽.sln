@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "文件", "文件", "{3C113993-FD38-4BC9-8493-7A2B58E1CAB2}"
+	ProjectSection(SolutionItems) = preProject
+		文件\103北市軟體競賽.pdf = 文件\103北市軟體競賽.pdf
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q2 Arnold 轉換", "Q2 Arnold 轉換\Q2 Arnold 轉換.csproj", "{7D8082D7-0F38-41E8-A71A-BBC6E1FACDD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q3 撰寫動態時間校正程式", "Q3 撰寫動態時間校正程式\Q3 撰寫動態時間校正程式.csproj", "{7A1117E4-50D1-4114-939E-B266A3287F76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q4 條件機率和貝氏定理於二元通訊系統之應用", "Q4 條件機率和貝氏定理於二元通訊系統之應用\Q4 條件機率和貝氏定理於二元通訊系統之應用.csproj", "{6E0833DE-2AC9-416F-8440-698FC21E5449}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q1 劃三角形和梯形歸屬函數", "Q1 劃三角形和梯形歸屬函數\Q1 劃三角形和梯形歸屬函數.csproj", "{484C10D9-3F2B-43D2-B4A3-8A870FEBEEBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D8082D7-0F38-41E8-A71A-BBC6E1FACDD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D8082D7-0F38-41E8-A71A-BBC6E1FACDD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D8082D7-0F38-41E8-A71A-BBC6E1FACDD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D8082D7-0F38-41E8-A71A-BBC6E1FACDD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A1117E4-50D1-4114-939E-B266A3287F76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A1117E4-50D1-4114-939E-B266A3287F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A1117E4-50D1-4114-939E-B266A3287F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A1117E4-50D1-4114-939E-B266A3287F76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E0833DE-2AC9-416F-8440-698FC21E5449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E0833DE-2AC9-416F-8440-698FC21E5449}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E0833DE-2AC9-416F-8440-698FC21E5449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E0833DE-2AC9-416F-8440-698FC21E5449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{484C10D9-3F2B-43D2-B4A3-8A870FEBEEBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{484C10D9-3F2B-43D2-B4A3-8A870FEBEEBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{484C10D9-3F2B-43D2-B4A3-8A870FEBEEBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{484C10D9-3F2B-43D2-B4A3-8A870FEBEEBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3146C8C-3AEF-4546-AA68-DD5DC94DB4A9}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,32 @@
+﻿<Window x:Class="Q2_三角形判斷程式.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Q2_三角形判斷程式"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="312.333">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="輸入三個座標" VerticalAlignment="Top"/>
+        <TextBox x:Name="P1XBox" HorizontalAlignment="Left" Height="23" Margin="46,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="P1YBox" HorizontalAlignment="Left" Height="23" Margin="171,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="座標1" VerticalAlignment="Top"/>
+        <TextBox x:Name="P2XBox" HorizontalAlignment="Left" Height="23" Margin="46,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="P2YBox" HorizontalAlignment="Left" Height="23" Margin="171,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,64,0,0" TextWrapping="Wrap" Text="座標2" VerticalAlignment="Top"/>
+        <TextBox x:Name="P3XBox" HorizontalAlignment="Left" Height="23" Margin="46,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="P3YBox" HorizontalAlignment="Left" Height="23" Margin="171,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,94,0,0" TextWrapping="Wrap" Text="座標3" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,145,0,0" TextWrapping="Wrap" Text="座標1~座標2 邊長:" VerticalAlignment="Top"/>
+        <Button x:Name="ExeBtn" Content="判斷" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" Width="281" Click="ExeBtn_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,166,0,0" TextWrapping="Wrap" Text="座標2~座標3 邊長:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,187,0,0" TextWrapping="Wrap" Text="座標3~座標1 邊長:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="P1P2Box" HorizontalAlignment="Left" Margin="116,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="     "/>
+        <TextBlock x:Name="P2P3Box" HorizontalAlignment="Left" Margin="116,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="     "/>
+        <TextBlock x:Name="P3P1Box" HorizontalAlignment="Left" Margin="116,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="     "/>
+        <TextBlock x:Name="ResBox" HorizontalAlignment="Left" Margin="10,208,0,0" TextWrapping="Wrap" Text="     " VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="158,10,0,0" TextWrapping="Wrap" Text="X" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="284,10,0,0" TextWrapping="Wrap" Text="Y" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{275E938C-8F1F-473A-93BA-D71813EAA029}</ProjectGuid>
+    <ProjectGuid>{FD778A17-6D54-43F8-863B-CDEBE45A6B05}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Q2_物件連通</RootNamespace>
     <AssemblyName>Q2 物件連通</AssemblyName>
@@ -92,9 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Pic1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

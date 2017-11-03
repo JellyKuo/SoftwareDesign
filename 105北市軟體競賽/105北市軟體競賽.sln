@@ -3,12 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q2 物件連通", "Q2 物件連通\Q2 物件連通.csproj", "{275E938C-8F1F-473A-93BA-D71813EAA029}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "文件", "文件", "{F63A9807-9E56-40BA-8D74-12ADF4D579D7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "文件", "文件", "{B1C3FD42-EF89-4FC3-864D-D6FA67E53BDF}"
 	ProjectSection(SolutionItems) = preProject
 		文件\105北市軟體競賽.pdf = 文件\105北市軟體競賽.pdf
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q1 水果銷售分析程式", "Q1 水果銷售分析程式\Q1 水果銷售分析程式.csproj", "{D8295FD8-1E1A-4950-8E5E-7C3E4FBDC43C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q2 物件連通", "Q2 物件連通\Q2 物件連通.csproj", "{FD778A17-6D54-43F8-863B-CDEBE45A6B05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,15 +18,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{275E938C-8F1F-473A-93BA-D71813EAA029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{275E938C-8F1F-473A-93BA-D71813EAA029}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{275E938C-8F1F-473A-93BA-D71813EAA029}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{275E938C-8F1F-473A-93BA-D71813EAA029}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8295FD8-1E1A-4950-8E5E-7C3E4FBDC43C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8295FD8-1E1A-4950-8E5E-7C3E4FBDC43C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8295FD8-1E1A-4950-8E5E-7C3E4FBDC43C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8295FD8-1E1A-4950-8E5E-7C3E4FBDC43C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD778A17-6D54-43F8-863B-CDEBE45A6B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD778A17-6D54-43F8-863B-CDEBE45A6B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD778A17-6D54-43F8-863B-CDEBE45A6B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD778A17-6D54-43F8-863B-CDEBE45A6B05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5561828B-EBB2-4EE5-8B2B-BF79D6C8043B}
+		SolutionGuid = {B0F7B16A-BB6D-4D68-B5EC-A0AB462CA632}
 	EndGlobalSection
 EndGlobal

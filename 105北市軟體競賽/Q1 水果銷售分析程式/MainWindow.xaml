@@ -1,0 +1,23 @@
+﻿<Window x:Class="Q1_水果銷售分析程式.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Q1_水果銷售分析程式"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="420">
+    <Grid>
+        <Button x:Name="OpenBtn" Content="載入文字檔並進行水果銷售分析" Margin="10,10,10,0" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,53,0,0" TextWrapping="Wrap" Text="最多人買的水果是" VerticalAlignment="Top" FontSize="24"/>
+        <TextBox x:Name="FirTxt" HorizontalAlignment="Left" Height="32" Margin="252,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,90,0,0" TextWrapping="Wrap" Text="第二多人買的水果是" VerticalAlignment="Top" FontSize="24"/>
+        <TextBox x:Name="SecTxt" HorizontalAlignment="Left" Height="32" Margin="252,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,127,0,0" TextWrapping="Wrap" Text="第三多人買的水果是" VerticalAlignment="Top" FontSize="24"/>
+        <TextBox x:Name="TrdTxt" HorizontalAlignment="Left" Height="32" Margin="252,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,164,0,0" TextWrapping="Wrap" Text="第四多人買的水果是" VerticalAlignment="Top" FontSize="24"/>
+        <TextBox x:Name="FthTxt" HorizontalAlignment="Left" Height="32" Margin="252,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,233,0,0" TextWrapping="Wrap" Text="最少人買的水果是" VerticalAlignment="Top" FontSize="24"/>
+        <TextBox x:Name="LstTxt" HorizontalAlignment="Left" Height="32" Margin="252,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="24"/>
+
+    </Grid>
+</Window>

@@ -25,7 +25,7 @@ namespace Q2_大數計算機
             InitializeComponent();
         }
 
-        public const int Len = 200;
+        public const int Len = 10;
 
         private void ClearBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -41,13 +41,13 @@ namespace Q2_大數計算機
             var B = new char[Len];
             for(int i = 0; i < BoxA.Text.Length; i++)
             {
-                A[BoxA.Text.Length-1 - i] = BoxA.Text[i];
+                A[Len - i-1] = BoxA.Text[i];
             }
             for (int i = 0; i < BoxB.Text.Length; i++)
             {
-                B[BoxB.Text.Length - 1 - i] = BoxB.Text[i];
+                B[Len - i-1] = BoxB.Text[i];
             }
-            char[] Result = null ;
+            char[] Result = null;
             switch (Btn.Name)
             {
                 case "PlusBtn":
@@ -59,21 +59,23 @@ namespace Q2_大數計算機
                     break;
             }
             Array.Reverse(Result);
-            ResBox.Text = new string(Result);
+
+
         }
 
-        private char[] Plus(char[] A,char[] B)
+        private char[] Plus(char[] a, char[] b)
         {
-            var Result = new char[Len];
-            for(int i = 0; i< Len; i++)
+            var Res = new char[Len];
+            for (int i = 0; i < Len; i++)
+                Res[i] = '0';
+            for (int i = 0; i < Len; i++)
             {
-                if (A[i] == 0)
-                    A[i] = (char)48;
-                if (B[i] == 0)
-                    B[i] = (char)48;
-                Result[i] = (char)(A[i] + B[i] - 48);
+                Res[i] = (char)(a[i] + b[i]);
+                if (Res[i] > 9)
+                    Res[i - 1]++;
             }
-            return Result;
+            return Res;
         }
     }
 }
+

@@ -17,8 +17,8 @@
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Column="2" Margin="10,117,10,0" TextAlignment="Center" Text="乙方符號" VerticalAlignment="Top"/>
         <TextBlock Grid.Column="0" Margin="10,117,10,0" TextAlignment="Center" Text="甲方符號" VerticalAlignment="Top"/>
-        <TextBox Grid.Column="2" Height="23" Margin="10,138,10,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox Grid.Column="0" Height="23" Margin="10,138,10,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="BBox" Grid.Column="2" Height="23" Margin="10,138,10,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="ABox" Grid.Column="0" Height="23" Margin="10,138,10,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Grid x:Name="GameGrid" Grid.Column="1" HorizontalAlignment="Left" Height="300" Margin="10,10,0,0" VerticalAlignment="Top" Width="325">
             <Grid.RowDefinitions>
                 <RowDefinition/>

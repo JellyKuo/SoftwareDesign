@@ -23,6 +23,19 @@ namespace Q2_物件連通
         public MainWindow()
         {
             InitializeComponent();
+            ReadBtn.Click += (sender, e) =>
+            {
+                var Ofd = new Microsoft.Win32.OpenFileDialog()
+                {
+                    Filter = "文字檔 (*.txt)|*.txt|所有檔案 (*.*)|*.*",
+                    CheckFileExists = true
+                };
+                if (Ofd.ShowDialog().Value != true)
+                    return;
+                var Path = Ofd.FileName;
+
+
+            };
         }
     }
 }
