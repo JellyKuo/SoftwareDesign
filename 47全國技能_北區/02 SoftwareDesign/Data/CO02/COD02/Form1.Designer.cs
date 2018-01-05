@@ -1,4 +1,4 @@
-﻿namespace COD04
+﻿namespace COD02
 {
     partial class Form1
     {
@@ -33,16 +33,19 @@
             this.txtFilePath = new System.Windows.Forms.TextBox();
             this.cmdOpenRead = new System.Windows.Forms.Button();
             this.cmdBrowse = new System.Windows.Forms.Button();
+            this.wsCombo = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.exportBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataList)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvDataList
             // 
             this.dgvDataList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDataList.Location = new System.Drawing.Point(38, 71);
+            this.dgvDataList.Location = new System.Drawing.Point(38, 94);
             this.dgvDataList.Name = "dgvDataList";
             this.dgvDataList.RowTemplate.Height = 24;
-            this.dgvDataList.Size = new System.Drawing.Size(803, 387);
+            this.dgvDataList.Size = new System.Drawing.Size(803, 364);
             this.dgvDataList.TabIndex = 0;
             // 
             // label1
@@ -58,12 +61,12 @@
             // 
             this.txtFilePath.Location = new System.Drawing.Point(107, 25);
             this.txtFilePath.Name = "txtFilePath";
-            this.txtFilePath.Size = new System.Drawing.Size(605, 22);
+            this.txtFilePath.Size = new System.Drawing.Size(703, 22);
             this.txtFilePath.TabIndex = 2;
             // 
             // cmdOpenRead
             // 
-            this.cmdOpenRead.Location = new System.Drawing.Point(749, 25);
+            this.cmdOpenRead.Location = new System.Drawing.Point(271, 53);
             this.cmdOpenRead.Name = "cmdOpenRead";
             this.cmdOpenRead.Size = new System.Drawing.Size(92, 23);
             this.cmdOpenRead.TabIndex = 3;
@@ -73,7 +76,7 @@
             // 
             // cmdBrowse
             // 
-            this.cmdBrowse.Location = new System.Drawing.Point(718, 25);
+            this.cmdBrowse.Location = new System.Drawing.Point(816, 24);
             this.cmdBrowse.Name = "cmdBrowse";
             this.cmdBrowse.Size = new System.Drawing.Size(25, 23);
             this.cmdBrowse.TabIndex = 4;
@@ -81,14 +84,46 @@
             this.cmdBrowse.UseVisualStyleBackColor = true;
             this.cmdBrowse.Click += new System.EventHandler(this.cmdBrowse_Click);
             // 
+            // wsCombo
+            // 
+            this.wsCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.wsCombo.FormattingEnabled = true;
+            this.wsCombo.Location = new System.Drawing.Point(107, 53);
+            this.wsCombo.Name = "wsCombo";
+            this.wsCombo.Size = new System.Drawing.Size(158, 20);
+            this.wsCombo.TabIndex = 5;
+            this.wsCombo.SelectedIndexChanged += new System.EventHandler(this.wsCombo_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(24, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 12);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "選擇工作表：";
+            // 
+            // exportBtn
+            // 
+            this.exportBtn.Location = new System.Drawing.Point(369, 53);
+            this.exportBtn.Name = "exportBtn";
+            this.exportBtn.Size = new System.Drawing.Size(92, 23);
+            this.exportBtn.TabIndex = 3;
+            this.exportBtn.Text = "匯出手冊";
+            this.exportBtn.UseVisualStyleBackColor = true;
+            this.exportBtn.Click += new System.EventHandler(this.exportBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(871, 489);
+            this.Controls.Add(this.wsCombo);
             this.Controls.Add(this.cmdBrowse);
+            this.Controls.Add(this.exportBtn);
             this.Controls.Add(this.cmdOpenRead);
             this.Controls.Add(this.txtFilePath);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvDataList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -108,6 +143,9 @@
         private System.Windows.Forms.TextBox txtFilePath;
         private System.Windows.Forms.Button cmdOpenRead;
         private System.Windows.Forms.Button cmdBrowse;
+        private System.Windows.Forms.ComboBox wsCombo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button exportBtn;
     }
 }
 
