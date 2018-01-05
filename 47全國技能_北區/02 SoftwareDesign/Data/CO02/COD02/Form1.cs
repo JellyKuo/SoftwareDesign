@@ -120,6 +120,21 @@ namespace COD02
             }
         }
 
+        private void dgvDataList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Station stn = new Station();
+
+            var row = dgvDataList.SelectedRows[0];
+            stn.StationId = (row.Cells["代碼"].Value as double?).ToString() ;
+            stn.StationNo = (string)row.Cells["站點代號"].Value;
+            stn.StationName = (string)row.Cells["場站名稱"].Value;
+            stn.StationLat = (row.Cells["緯度"].Value as double?).ToString();
+            stn.StationLng = (row.Cells["經度"].Value as double?).ToString();
+            stn.StationAddress = (string)row.Cells["地址"].Value;
+            var detForm = new detailForm(stn);
+            detForm.Show();
+        }
+
         private void populateDgv(string sheetName)
         {
             try

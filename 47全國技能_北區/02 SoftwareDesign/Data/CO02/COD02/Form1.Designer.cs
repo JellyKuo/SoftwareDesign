@@ -42,11 +42,12 @@
             // dgvDataList
             // 
             this.dgvDataList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDataList.Location = new System.Drawing.Point(38, 94);
+            this.dgvDataList.Location = new System.Drawing.Point(38, 82);
             this.dgvDataList.Name = "dgvDataList";
             this.dgvDataList.RowTemplate.Height = 24;
-            this.dgvDataList.Size = new System.Drawing.Size(803, 364);
+            this.dgvDataList.Size = new System.Drawing.Size(803, 376);
             this.dgvDataList.TabIndex = 0;
+            this.dgvDataList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDataList_CellDoubleClick);
             // 
             // label1
             // 
