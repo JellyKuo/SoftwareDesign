@@ -169,9 +169,12 @@ namespace COD02
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             //Release possible memory
-            if(conn.State == ConnectionState.Open)
-                 conn.Close();
-            conn.Dispose();
+            if(conn!=null)
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+                 
             worksheets = null;
             base.OnFormClosing(e);
         }

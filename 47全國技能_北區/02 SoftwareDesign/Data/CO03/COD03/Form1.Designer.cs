@@ -45,6 +45,7 @@
             this.lblCount = new System.Windows.Forms.Label();
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.btnClean = new System.Windows.Forms.Button();
+            this.cn = new System.Data.SqlClient.SqlConnection();
             this.SuspendLayout();
             // 
             // label1
@@ -200,7 +201,8 @@
             this.hScrollBar1.Name = "hScrollBar1";
             this.hScrollBar1.Size = new System.Drawing.Size(168, 17);
             this.hScrollBar1.TabIndex = 4;
-             // 
+            this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar1_Scroll);
+            // 
             // btnClean
             // 
             this.btnClean.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -211,6 +213,13 @@
             this.btnClean.Text = "清除";
             this.btnClean.UseVisualStyleBackColor = true;
             this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
+            // 
+            // cn
+            // 
+            this.cn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Jelly\\Documents\\Rep" +
+    "ository\\SoftwareDesign\\47全國技能_北區\\02 SoftwareDesign\\Data\\CO03\\COD03\\TestDB.mdf\";I" +
+    "ntegrated Security=True";
+            this.cn.FireInfoMessageEventOnUserErrors = false;
             // 
             // Form1
             // 
@@ -263,6 +272,7 @@
         private System.Windows.Forms.Label lblCount;
         private System.Windows.Forms.HScrollBar hScrollBar1;
         private System.Windows.Forms.Button btnClean;
+        private System.Data.SqlClient.SqlConnection cn;
     }
 }
 

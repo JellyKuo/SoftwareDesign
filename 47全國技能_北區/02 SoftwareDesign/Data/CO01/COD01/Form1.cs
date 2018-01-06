@@ -35,9 +35,7 @@ namespace COD01
 
             XmlNode xmlNode;
             // 使用FileStream讀取XML文件books.xml
-            // TODO
             // 將XML文件載入XmlDocment物件xmldoc
-            // TODO            
             treeView1.Nodes.Clear();
             // 新增TreeView控制項的根元素，即library
             treeView1.Nodes.Add(new TreeNode(xmldoc.DocumentElement.Name));
@@ -130,7 +128,14 @@ namespace COD01
 
         private void delBtn_Click(object sender, EventArgs e)
         {
-            treeView1.SelectedNode.Remove();
+            if(treeView1.SelectedNode.Text != "book")
+            {
+                MessageBox.Show("請選擇一本書!");
+                return;
+            }
+            if(MessageBox.Show(string.Format("確定要移除  {0}({1}) 的書嗎?", treeView1.SelectedNode.Nodes[1].Nodes[0].Text, treeView1.SelectedNode.Nodes[0].Nodes[0].Text),"確定",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning) ==DialogResult.OK)
+             treeView1.SelectedNode.Remove();
+            else return;
         }
 
         private void addBtn_Click(object sender, EventArgs e)
@@ -142,6 +147,11 @@ namespace COD01
             if (ofd.ShowDialog() != DialogResult.OK)
                 return;
 
+            var xmldoc = new XmlDocument();
+            xmldoc.Load(ofd.FileName);
+            XmlNode xNode = xmldoc.DocumentElement;
+           
+            
         }
     }
 }
