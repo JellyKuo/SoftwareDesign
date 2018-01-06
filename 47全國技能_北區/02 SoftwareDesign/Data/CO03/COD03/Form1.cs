@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 using System.Data.SqlClient;
+using System.IO;
 
 namespace COD03
 {
@@ -66,6 +67,13 @@ namespace COD03
                     txtBasesalary.Text = (dt.Rows[v]["basesalary"] as int?).ToString();
                     txtBonus.Text = (dt.Rows[v]["bonus"] as int?).ToString();
                     txtDeduct.Text = (dt.Rows[v]["deduct"] as int?).ToString();
+                    if ((string)dt.Rows[v]["Picture"] != "") 
+                        pictureBox1.Image = Image.FromFile((string)dt.Rows[v]["Picture"]);
+                    else
+                    {
+                        pictureBox1.Image = null;
+                    }
+                        pictureBox1.Update();
 
                     lblCount.Text = (v+1).ToString()+"/"+dt.Rows.Count.ToString();
                 }
@@ -127,7 +135,7 @@ namespace COD03
                     MessageBox.Show("與現有資料庫重複!");
                 else
                     MessageBox.Show("加入成功!");
-
+                txtId.Enabled = false;  
                 hScrollBar1_Scroll(null, null);
             }
             catch(InvalidCastException invalidCaseEx)
@@ -159,6 +167,8 @@ namespace COD03
         private void btnDelete_Click(object sender, EventArgs e)
         {
             // 刪除資料
+            if(MessageBox.Show("確定刪除?","",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning)!=DialogResult.OK);
+            return;
             //We are not allowed to delete data, instead we mark it as not enabled
             var sqlstr = string.Format("UPDATE Salary SET Enabled = 0 WHERE Id = '{0}';",txtId.Text);
             Edit(sqlstr);
@@ -169,7 +179,9 @@ namespace COD03
 
         private void btnShow_Click(object sender, EventArgs e)
         {
-            //TODO 開啟Form2表單
+            //開啟Form2表單
+            var f2 = new Form2();
+            f2.Show();
         }
 
         private int? checkId(string id)
@@ -196,6 +208,39 @@ namespace COD03
             //If check > 9, get only ones place
             check = check > 9 ? check % 10 : check;
             return check;
+        }
+
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
+        {
+            var ofd = new OpenFileDialog()
+            {
+                Filter = "JPG | *.jpg"
+            };
+            if (ofd.ShowDialog() != DialogResult.OK)
+                return;
+
+            //Get relative path using Uri
+            var selUri = new Uri(ofd.FileName);
+            var envUri = new Uri(Application.ExecutablePath);
+            //Uri's MakeRelativeUri utilize the specified uri as base path
+            var path = envUri.MakeRelativeUri(selUri).ToString();
+            var id = txtId.Text;
+            if (id == "")
+            {
+                MessageBox.Show("Id不能為空!");
+                return;
+            }
+            var sqlstr = string.Format("UPDATE Salary SET Picture = '{0}' WHERE Id = '{1}'", path,id);
+            if (!Edit(sqlstr))
+            {
+                MessageBox.Show("指定的Id不存在!");
+                return;
+            }
+            else
+            {
+                MessageBox.Show("圖片設定成功!");
+                hScrollBar1_Scroll(null, null);
+            }
         }
     }
 }

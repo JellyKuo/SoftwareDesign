@@ -20,9 +20,18 @@ namespace COD03
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            SqlConnection cn = new SqlConnection();
             //完成連線字串，將目前資料庫資料顯示在DataGridView內
-            
+            cn.Open();
+            var sqlstr = "SELECT * FROM Salary ORDER BY subtotal DESC";
+            using (var cmd = new SqlCommand(sqlstr, cn))
+            {
+                using (var ada = new SqlDataAdapter(cmd))
+                {
+                    var dt = new DataTable();
+                    ada.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                }
+            }
         }
     }
 }
