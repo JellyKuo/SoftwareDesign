@@ -48,6 +48,7 @@
             this.cn = new System.Data.SqlClient.SqlConnection();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.importBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,7 +147,7 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnAdd.Location = new System.Drawing.Point(166, 163);
+            this.btnAdd.Location = new System.Drawing.Point(118, 162);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(56, 23);
             this.btnAdd.TabIndex = 6;
@@ -157,7 +158,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnUpdate.Location = new System.Drawing.Point(254, 163);
+            this.btnUpdate.Location = new System.Drawing.Point(206, 162);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(56, 23);
             this.btnUpdate.TabIndex = 7;
@@ -168,7 +169,7 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnDelete.Location = new System.Drawing.Point(346, 163);
+            this.btnDelete.Location = new System.Drawing.Point(298, 162);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(56, 23);
             this.btnDelete.TabIndex = 8;
@@ -209,7 +210,7 @@
             // btnClean
             // 
             this.btnClean.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnClean.Location = new System.Drawing.Point(75, 163);
+            this.btnClean.Location = new System.Drawing.Point(27, 162);
             this.btnClean.Name = "btnClean";
             this.btnClean.Size = new System.Drawing.Size(56, 23);
             this.btnClean.TabIndex = 5;
@@ -245,6 +246,17 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "相片";
             // 
+            // importBtn
+            // 
+            this.importBtn.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.importBtn.Location = new System.Drawing.Point(399, 162);
+            this.importBtn.Name = "importBtn";
+            this.importBtn.Size = new System.Drawing.Size(95, 23);
+            this.importBtn.TabIndex = 9;
+            this.importBtn.Text = "匯入資料";
+            this.importBtn.UseVisualStyleBackColor = true;
+            this.importBtn.Click += new System.EventHandler(this.importBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -253,6 +265,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.hScrollBar1);
             this.Controls.Add(this.lblCount);
+            this.Controls.Add(this.importBtn);
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -302,6 +315,7 @@
         private System.Data.SqlClient.SqlConnection cn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button importBtn;
     }
 }
 

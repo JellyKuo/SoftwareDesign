@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.IO;
 
@@ -129,7 +130,7 @@ namespace COD03
                 var deduct = int.Parse(txtDeduct.Text);
                 var subtotal = basesalary + bonus - deduct;
 
-                sqlstr = string.Format("INSERT INTO Salary VALUES('{0}','{1}',{2},{3},{4},{5},1)", id, name, basesalary, bonus, deduct,subtotal);
+                sqlstr = string.Format("INSERT INTO Salary VALUES('{0}','{1}',{2},{3},{4},{5},1,'')", id, name, basesalary, bonus, deduct,subtotal);
 
                 if(!Edit(sqlstr))
                     MessageBox.Show("與現有資料庫重複!");
@@ -167,7 +168,7 @@ namespace COD03
         private void btnDelete_Click(object sender, EventArgs e)
         {
             // 刪除資料
-            if(MessageBox.Show("確定刪除?","",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning)!=DialogResult.OK);
+            if(MessageBox.Show("確定刪除?","",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning)!=DialogResult.OK)
             return;
             //We are not allowed to delete data, instead we mark it as not enabled
             var sqlstr = string.Format("UPDATE Salary SET Enabled = 0 WHERE Id = '{0}';",txtId.Text);
@@ -240,6 +241,83 @@ namespace COD03
             {
                 MessageBox.Show("圖片設定成功!");
                 hScrollBar1_Scroll(null, null);
+            }
+        }
+
+        private void importBtn_Click(object sender, EventArgs e)
+        {
+            string path = "";
+            using(var ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "Excel file (*.xls, *.xlsx)|*.xlsx;*.xls";
+                if (ofd.ShowDialog() != DialogResult.OK)
+                    return;
+                path = ofd.FileName;
+            }
+
+            DataTable dt = new DataTable() ;
+
+            var connStr = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties='Excel 12.0;HDR=Yes;IMEX=1';",path);
+            using (var oleCn = new OleDbConnection(connStr))
+            {
+                oleCn.Open();
+                var sqlStr = "SELECT * FROM [import$]";
+                using (var cmd = new OleDbCommand(sqlStr,oleCn))
+                {
+                    using(var ada = new OleDbDataAdapter(cmd))
+                    {
+                        ada.Fill(dt);
+                    }
+                }
+            }
+
+            var idTable = new DataTable();
+            using(var cmd = new SqlCommand("SELECT Id FROM Salary", cn))
+                using(var ada = new SqlDataAdapter(cmd))
+                    ada.Fill(idTable);
+
+
+            var sb = new StringBuilder();
+            foreach (DataRow row in dt.Rows)
+            {
+                var id = (string)row["id"];
+                if (id[5] - 48 != checkId(id.Substring(0, 5)))
+                {
+                    sb.AppendFormat("{0}：員工編號不符合驗證規則，請修正!{1}", (string)row["id"], Environment.NewLine);
+                    continue;
+                }
+                bool isDuplicate = false;
+                foreach (DataRow idRow in idTable.Rows)
+                    if (id == (string)idRow[0])
+                    {
+                        sb.AppendFormat("{0}：員工編號與現有資料重複，請修正!{1}", (string)row["id"], Environment.NewLine);
+                        isDuplicate = true;
+                        break;
+                    }
+                if (isDuplicate)
+                    continue;
+
+                var name = (string)row["name"];
+                var basesalary = (double)row["basesalary"];
+                var bonus = (double)row["bonus"];
+                var deduct = (double)row["deduct"];
+                var subtotal = basesalary + bonus - deduct;
+
+                var sqlstr = string.Format("INSERT INTO Salary VALUES('{0}','{1}',{2},{3},{4},{5},1,'')", id, name, basesalary, bonus, deduct, subtotal);
+
+                using(var cmd = new SqlCommand(sqlstr, cn))
+                {
+                    var res = cmd.ExecuteNonQuery();
+                    idTable.Rows.Add(id);
+                }
+            }
+
+            if(sb.Length != 0)
+            {
+                var logPath = Application.StartupPath + @"/Import_ErrLog.txt";
+                var s = File.CreateText(logPath);
+                s.Write(sb.ToString());
+                s.Close();
             }
         }
     }
