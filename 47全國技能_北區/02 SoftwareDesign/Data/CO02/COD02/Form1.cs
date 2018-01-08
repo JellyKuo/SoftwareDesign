@@ -93,8 +93,16 @@ namespace COD02
 
         private void exportBtn_Click(object sender, EventArgs e)
         {
+            var sfd = new SaveFileDialog
+            {
+                Filter = "Word document (*.docx)|*.docx|PDF (*.pdf)|*.pdf"
+            };
+            if (sfd.ShowDialog() != DialogResult.OK)
+                return;
+
+
             var wordApp = new Word.Application();
-            wordApp.Visible = true;
+            wordApp.Visible = false;
             Word.Document doc = wordApp.Documents.Add();
             //TODO: Add header and footer
             foreach (DataRow row in dt.Rows)
@@ -118,6 +126,26 @@ namespace COD02
                 doc.Words.Last.InsertBreak(Word.WdBreakType.wdPageBreak);
                 
             }
+            switch (sfd.FilterIndex)
+            {
+                case 1:
+                    doc.SaveAs(sfd.FileName);
+                    break;
+                case 2:
+                    doc.SaveAs(sfd.FileName,Word.WdSaveFormat.wdFormatPDF);
+                    break;
+                default:
+                    break;
+            }
+
+            //doc = null;
+            //Word is a idiot
+            //When saving as word doc, Word considered the document saved
+            //But when exporting to PDFs, Word thinks the other way around
+            //Therefore we add false as parameter when quitting word to supress "Do you want to save?" prompt
+            //Seriously, C# Interop SUCKS
+            wordApp.Quit(false);
+            wordApp = null;
         }
 
         private void dgvDataList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
